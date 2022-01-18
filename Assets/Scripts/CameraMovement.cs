@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+ public float speed;
+    void Update() {
+        if (PlayerController.scoreValue > 0)
+        {
+            transform.Translate(Vector2.right * speed * Time.deltaTime);
+        }
     }
 }

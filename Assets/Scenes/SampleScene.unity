@@ -156,7 +156,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4772763276859889573, guid: 80f7eef46f4ccf7479c76d6ec11e3bc6, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 4772763276859889573, guid: 80f7eef46f4ccf7479c76d6ec11e3bc6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -307,7 +307,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &376194182
 PrefabInstance:
@@ -342,7 +342,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4772763276859889573, guid: 80f7eef46f4ccf7479c76d6ec11e3bc6, type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 4772763276859889573, guid: 80f7eef46f4ccf7479c76d6ec11e3bc6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -515,7 +515,7 @@ GameObject:
   - component: {fileID: 535438958}
   - component: {fileID: 535438957}
   m_Layer: 0
-  m_Name: Forest1 (1)
+  m_Name: ForestMiddle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -565,10 +565,10 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
+  m_DrawMode: 2
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
+  m_SpriteTileMode: 1
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
@@ -581,10 +581,10 @@ Transform:
   m_GameObject: {fileID: 535438956}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.89, y: -0.14546055, z: 0}
-  m_LocalScale: {x: 10.6063795, y: 7.0524325, z: 1}
+  m_LocalScale: {x: 28.849352, y: 11.283893, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &547500114
 GameObject:
@@ -740,7 +740,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4772763276859889573, guid: 80f7eef46f4ccf7479c76d6ec11e3bc6, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4772763276859889573, guid: 80f7eef46f4ccf7479c76d6ec11e3bc6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5680,7 +5680,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4772763276859889573, guid: 80f7eef46f4ccf7479c76d6ec11e3bc6, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4772763276859889573, guid: 80f7eef46f4ccf7479c76d6ec11e3bc6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5724,63 +5724,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80f7eef46f4ccf7479c76d6ec11e3bc6, type: 3}
---- !u!1 &923143200
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 923143202}
-  - component: {fileID: 923143201}
-  m_Layer: 0
-  m_Name: InvisiWallRight
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!61 &923143201
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 923143200}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 1.0430856, y: -0.17544222}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.3394556, y: 10.228284}
-  m_EdgeRadius: 0
---- !u!4 &923143202
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 923143200}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.961, y: 0.08518812, z: -5.5090413}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1170861961
 GameObject:
   m_ObjectHideFlags: 0
@@ -5866,7 +5809,7 @@ Transform:
   - {fileID: 547500115}
   - {fileID: 778739206}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1170861964
 BoxCollider2D:
@@ -5927,7 +5870,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e50987a38c59b14fb174a9a816c79cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreValue: 0
   speed: 5
   jumpForce: 9
   feetPosition: {fileID: 547500115}
@@ -5936,6 +5878,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   jumpTime: 0.27
+  carrotPrefab: {fileID: 4772763276859889563, guid: 80f7eef46f4ccf7479c76d6ec11e3bc6, type: 3}
+  deathBox: {fileID: 1646903058}
+  deathCheck: 0
   carrotGet: {fileID: 778739208}
 --- !u!1 &1537306344
 GameObject:
@@ -6044,7 +5989,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1622179563
 GameObject:
@@ -6057,7 +6002,7 @@ GameObject:
   - component: {fileID: 1622179565}
   - component: {fileID: 1622179564}
   m_Layer: 0
-  m_Name: Forest1
+  m_Name: ForestBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6107,10 +6052,10 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
+  m_DrawMode: 2
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
+  m_SpriteTileMode: 1
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
@@ -6123,10 +6068,10 @@ Transform:
   m_GameObject: {fileID: 1622179563}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.67, y: -0.14546055, z: 0}
-  m_LocalScale: {x: 10.6063795, y: 7.0524325, z: 1}
+  m_LocalScale: {x: 28.849352, y: 11.283893, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1627930070
 GameObject:
@@ -6208,7 +6153,7 @@ Transform:
   m_LocalScale: {x: 8.1762, y: 7.4040065, z: 8.1762}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1646903058
 GameObject:
@@ -6260,12 +6205,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1646903058}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.05, y: 0.08518812, z: -5.5090413}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -11.05, y: 0.08518812, z: -5.509041}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1690288955
 GameObject:
@@ -6348,7 +6293,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1690288958
 BoxCollider2D:
@@ -6409,7 +6354,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4772763276859889573, guid: 80f7eef46f4ccf7479c76d6ec11e3bc6, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4772763276859889573, guid: 80f7eef46f4ccf7479c76d6ec11e3bc6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6560,7 +6505,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1887703171
 GameObject:
@@ -6617,7 +6562,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1912887884
 GameObject:
@@ -6630,7 +6575,7 @@ GameObject:
   - component: {fileID: 1912887886}
   - component: {fileID: 1912887885}
   m_Layer: 0
-  m_Name: Forest1 (2)
+  m_Name: ForestForeground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6680,10 +6625,10 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
+  m_DrawMode: 2
+  m_Size: {x: 2.9218931, y: 1.0580667}
+  m_AdaptiveModeThreshold: 1e-10
+  m_SpriteTileMode: 1
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
@@ -6695,11 +6640,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1912887884}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.66, y: 0.32, z: 0}
-  m_LocalScale: {x: 8.725405, y: 7.0524325, z: 1}
+  m_LocalPosition: {x: 21.7206, y: -0.1967, z: 0}
+  m_LocalScale: {x: 23.7331, y: 11.283893, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1942148855
 PrefabInstance:
@@ -6734,7 +6679,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4772763276859889573, guid: 80f7eef46f4ccf7479c76d6ec11e3bc6, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4772763276859889573, guid: 80f7eef46f4ccf7479c76d6ec11e3bc6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6844,7 +6789,7 @@ Transform:
   m_Children:
   - {fileID: 648976560}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2110961958
 MonoBehaviour:
@@ -6855,9 +6800,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2110961955}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03ca770ec1a14f8408f724c4b00349e7, type: 3}
+  m_Script: {fileID: 11500000, guid: 1e346855c066d2a4fbcb9b32570afddd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0
 --- !u!1001 &4772763276536679237
 PrefabInstance:
   m_ObjectHideFlags: 0

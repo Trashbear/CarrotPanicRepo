@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     Rigidbody2D rd2d;
-    public int scoreValue = 0;
+    public static int scoreValue = 0;
     float horizontal;
     float vertical;
     public float speed;
@@ -23,12 +23,19 @@ public class PlayerController : MonoBehaviour
     private float jumpCounter;
     public float jumpTime;
     private bool isJumping;
+
+    public GameObject carrotPrefab;
+
+    public GameObject deathBox;
+
+    public bool deathCheck = false;
     
     [SerializeField] ParticleSystem carrotGet;
     // Start is called before the first frame update
     void Start()
     {
         rd2d = GetComponent<Rigidbody2D>();
+        deathCheck = false;
     }
 
     // Update is called once per frame
@@ -67,10 +74,16 @@ public class PlayerController : MonoBehaviour
             isJumping = false;
         }
     }
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D carrotPrefab)
     {
         scoreValue += 1;
         carrotGet.Play();
         Debug.Log("Score: " + scoreValue);
+    }
+
+    private void OnCollisionEnter2D(Collision2D deathBox)
+    {
+        Debug.Log("Dead");
+        deathCheck = true;
     }
 }
