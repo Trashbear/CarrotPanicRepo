@@ -8,10 +8,10 @@ public class PlayerController : MonoBehaviour
     public static int scoreValue = 0;
     float horizontal;
     float vertical;
-    public float speed;
+    public static float speed;
 
     private float getInput;
-    public float jumpForce;
+    public static float jumpForce;
 
     private bool onGround;
 
@@ -27,15 +27,14 @@ public class PlayerController : MonoBehaviour
     public GameObject carrotPrefab;
 
     public GameObject deathBox;
-
-    public bool deathCheck = false;
     
     [SerializeField] ParticleSystem carrotGet;
+
+    public GameObject starterText;
     // Start is called before the first frame update
     void Start()
     {
         rd2d = GetComponent<Rigidbody2D>();
-        deathCheck = false;
     }
 
     // Update is called once per frame
@@ -47,6 +46,18 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if(starterText == null && TimerCountdown.secondsLeft > 0)
+        {
+            Debug.Log("Move");
+            speed = 6;
+            jumpForce = 9;
+        }
+        else
+        {
+            speed = 0;
+            jumpForce = 0;
+        }
+
         onGround = Physics2D.OverlapCircle(feetPosition.position, Radius, groundCheck);
 
         if(onGround == true && Input.GetKeyDown(KeyCode.W))
@@ -54,6 +65,10 @@ public class PlayerController : MonoBehaviour
             isJumping = true;
             jumpCounter = jumpTime;
             rd2d.velocity = Vector2.up * jumpForce;
+        }
+        if (Input.GetKeyDown("escape"))
+        {
+            Application.Quit();
         }
         
         if(Input.GetKey(KeyCode.W))
@@ -81,9 +96,13 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Score: " + scoreValue);
     }
 
-    private void OnCollisionEnter2D(Collision2D deathBox)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("Dead");
-        deathCheck = true;
+        DeathBox death = other.gameObject.GetComponent<DeathBox>();
+
+        if (death != null)
+        {
+            death.deathCheck = true;
+        }
     }
 }
