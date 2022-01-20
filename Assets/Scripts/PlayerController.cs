@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -31,10 +32,20 @@ public class PlayerController : MonoBehaviour
     [SerializeField] ParticleSystem carrotGet;
 
     public GameObject starterText;
+
+    public GameObject timer;
+
+    public GameObject scoreText;
+
+    public AudioClip background;
+    public AudioClip scoreIncrease;
+    AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
         rd2d = GetComponent<Rigidbody2D>();
+       timer.SetActive(false);
+       audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -42,15 +53,24 @@ public class PlayerController : MonoBehaviour
     {
         getInput = Input.GetAxisRaw("Horizontal");
         rd2d.velocity = new Vector2(getInput * speed, rd2d.velocity.y);
+        scoreText.GetComponent<Text>().text = "Carrots: " + scoreValue;
     }
 
     void Update()
     {
+        if(GameOverScript.winCheck == true || GameOverScript.loseCheck == true)
+        {
+        audioSource.Stop();
+        }
+        if(starterText == null)
+        {
+            timer.SetActive(true);
+        }
         if(starterText == null && TimerCountdown.secondsLeft > 0)
         {
-            Debug.Log("Move");
             speed = 6;
             jumpForce = 9;
+            
         }
         else
         {
@@ -88,12 +108,19 @@ public class PlayerController : MonoBehaviour
         {
             isJumping = false;
         }
+
+        if (GameOverScript.loseCheck == true || GameOverScript.winCheck == true)
+        {
+            speed = 0;
+            jumpForce = 0;
+        }
+
     }
     private void OnTriggerEnter2D(Collider2D carrotPrefab)
     {
         scoreValue += 1;
         carrotGet.Play();
-        Debug.Log("Score: " + scoreValue);
+        audioSource.PlayOneShot(scoreIncrease);
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -103,6 +130,8 @@ public class PlayerController : MonoBehaviour
         if (death != null)
         {
             death.deathCheck = true;
+            speed = 0;
+            jumpForce = 0;
         }
     }
 }

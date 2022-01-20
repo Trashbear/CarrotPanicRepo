@@ -6,18 +6,20 @@ using UnityEngine.UI;
 public class TimerCountdown : MonoBehaviour
 {
     public GameObject textDisplay;
-    public static int secondsLeft = 12;
+    public static int secondsLeft = 10;
     public bool takingAway = false;
+
+    public GameObject starterText;
     // Start is called before the first frame update
     
     void Start()
     {
-        textDisplay.GetComponent<Text>().text = "00:" + secondsLeft;
+        textDisplay.GetComponent<Text>().text = "00: " + secondsLeft;
     }
 
     void FixedUpdate()
     {
-        if (takingAway == false && secondsLeft > 0)
+        if (takingAway == false && secondsLeft > 0 && starterText == null)
         {
             StartCoroutine(Timertake());
         }
@@ -25,6 +27,7 @@ public class TimerCountdown : MonoBehaviour
         {
             CameraMovement.speed = 0;
         }
+
     }
 
     IEnumerator Timertake()

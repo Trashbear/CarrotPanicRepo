@@ -13,6 +13,9 @@ public class ParallaxScript : MonoBehaviour
             transform.Translate(Vector2.left * speed * Time.deltaTime);
             }
         }
-
+        if (GameOverScript.loseCheck == true)
+        {
+            speed = 0;
+        }
     }
 }

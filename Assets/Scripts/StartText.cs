@@ -10,7 +10,7 @@ public class StartText : MonoBehaviour
     void Start()
     {
         startMessage = true;
-       Destroy(gameObject, 5); 
+       Destroy(gameObject, 4); 
     }
 
     // Update is called once per frame
