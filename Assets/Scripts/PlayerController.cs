@@ -40,12 +40,16 @@ public class PlayerController : MonoBehaviour
     public AudioClip background;
     public AudioClip scoreIncrease;
     AudioSource audioSource;
+    public AudioClip introSound;
+    public AudioClip winSound;
     // Start is called before the first frame update
     void Start()
     {
         rd2d = GetComponent<Rigidbody2D>();
        timer.SetActive(false);
        audioSource = GetComponent<AudioSource>();
+       audioSource.PlayOneShot(introSound);
+       StartCoroutine(PlayMusic());
     }
 
     // Update is called once per frame
@@ -70,7 +74,6 @@ public class PlayerController : MonoBehaviour
         {
             speed = 6;
             jumpForce = 9;
-            
         }
         else
         {
@@ -133,5 +136,14 @@ public class PlayerController : MonoBehaviour
             speed = 0;
             jumpForce = 0;
         }
+    }
+        IEnumerator PlayMusic()
+    {
+         yield return new WaitForSeconds(2);
+         audioSource.volume = 0.2f;
+        audioSource.clip = background;
+                audioSource.loop = false;
+                audioSource.Play();
+
     }
 }

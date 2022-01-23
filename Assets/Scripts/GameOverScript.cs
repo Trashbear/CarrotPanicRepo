@@ -46,7 +46,7 @@ public class GameOverScript : MonoBehaviour
            boxDisplay.SetActive(true);  
            CameraMovement.speed = 0;
            StartCoroutine(CloseGame());
-           audioSource.volume = 0.01f;
+           audioSource.volume = 0.005f;          
            audioSource.PlayOneShot(loseSound);
         }
         if(PlayerController.scoreValue < 5 && TimerCountdown.secondsLeft == 0)
